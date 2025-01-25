@@ -48,7 +48,16 @@
             z-index: 10;
         }
 
-        /* Al hacer scroll, se aplica color y sombra */
+        .nav-link {
+            padding: 0.5rem 0.75rem;
+            /* Reducir padding vertical */
+            white-space: nowrap;
+            /* Prevenir saltos de línea */
+            font-size: 0.95rem;
+            /* Ajustar tamaño si es necesario */
+        }
+
+        /* Al hacer scroll, aplicamos color vinotinto y una sombra */
         .navbar.scrolled {
             background-color: var(--vinotinto) !important;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
@@ -133,7 +142,7 @@
             background-color: #fdd84e;
         }
 
-        /* SECCION TITULOS */
+        /* TITULOS DE SECCION */
         .section-title {
             font-family: 'Lora', serif;
             color: var(--vinotinto);
@@ -194,7 +203,7 @@
             padding: 0;
             margin: 0 auto;
             text-align: left;
-            /* Para que los ítems se lean cómodamente */
+            /* Para mejor lectura */
             max-width: 600px;
         }
 
@@ -212,7 +221,7 @@
             left: 0;
         }
 
-        /* SECCION COMO AFILIARSE */
+        /* AFILIACION */
         .afiliacion {
             padding: 60px 20px;
             background-color: var(--fondo-gris);
@@ -263,11 +272,6 @@
 
         .principios .container {
             max-width: 900px;
-        }
-
-        .principios .list-group-item {
-            border: none;
-            padding-left: 0;
         }
 
         /* ACTIVIDADES DESTACADAS */
@@ -360,6 +364,35 @@
             margin-bottom: 0.5rem;
         }
 
+        /* INFO EXTRA: SERVICIOS / CREDITOS */
+        .extra-info {
+            padding: 60px 20px;
+        }
+
+        .extra-info .container {
+            max-width: 900px;
+        }
+
+        .list-check {
+            list-style: none;
+            padding-left: 1.5rem;
+            text-align: left;
+        }
+
+        .list-check li {
+            position: relative;
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .list-check li::before {
+            content: "•";
+            color: var(--vinotinto);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
         /* CONTACTO */
         .contact {
             background-color: var(--vinotinto);
@@ -423,6 +456,7 @@
                     <li class="nav-item"><a class="nav-link" href="#institutos">Institutos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#principios">Principios</a></li>
                     <li class="nav-item"><a class="nav-link" href="#actividades">Actividades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#infoextra">Servicios</a></li>
                     <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonios</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
                 </ul>
@@ -445,25 +479,41 @@
             <h2 class="section-title">¿Quiénes somos?</h2>
             <p>
                 La Cooperativa de la Universidad Distrital Francisco José de Caldas (COUD) es una organización jurídica
-                de derecho privado, sin ánimo de lucro y de responsabilidad limitada. Nuestra misión es ofrecer
-                servicios educativos, crediticios, culturales y recreativos para la comunidad universitaria y sus
-                familias, fortaleciendo el bienestar colectivo.
+                de
+                derecho privado, sin ánimo de lucro y de responsabilidad limitada. Nuestra misión es ofrecer servicios
+                educativos, crediticios, culturales y recreativos para la comunidad universitaria y sus familias,
+                fortaleciendo
+                el bienestar colectivo.
             </p>
 
             <h3 class="sub-section-title">Misión</h3>
             <p>
                 Somos una Cooperativa especializada en servicios educativos, crediticios, culturales y recreativos, que
-                brinda confianza y bienestar a sus asociados y familias en el logro de sus metas. COUD también trabaja
-                en convenios interadministrativos para apoyar comunidades públicas y privadas con miras a fortalecer el
-                desarrollo funcional de las entidades cooperantes.
+                brinda
+                confianza y bienestar a sus asociados y familias en el logro de sus metas. COUD también trabaja en
+                convenios
+                interadministrativos para apoyar comunidades públicas y privadas con miras a fortalecer el desarrollo
+                funcional
+                de las entidades cooperantes.
             </p>
 
             <h3 class="sub-section-title">Visión</h3>
             <p>
                 Ser una Cooperativa líder para el 2030 en la prestación de servicios educativos, crediticios, culturales
-                y recreativos para sus asociados, familias y la comunidad en general; siendo sostenibles con un
-                crecimiento rentable, buscando contribuir al mejoramiento de la calidad de vida, brindando confianza y
-                solidaridad a la comunidad universitaria.
+                y
+                recreativos para sus asociados, familias y la comunidad en general; siendo sostenibles con un
+                crecimiento
+                rentable, buscando contribuir al mejoramiento de la calidad de vida, brindando confianza y solidaridad a
+                la
+                comunidad universitaria.
+            </p>
+
+            <h3 class="sub-section-title">Descripción General</h3>
+            <p>
+                COUD es una cooperativa orientada a brindar bienestar y oportunidades a los asociados de la Universidad
+                Distrital Francisco José de Caldas. Ofrecemos soluciones financieras, capacitación y múltiples convenios
+                para
+                facilitar la vida universitaria.
             </p>
         </div>
     </section>
@@ -483,90 +533,60 @@
     </section>
 
     <!-- SECCION COMO AFILIARSE -->
-    <section id="afiliacion" class="afiliacion" style="background-color: var(--fondo-gris); padding: 60px 20px;">
+    <section id="afiliacion" class="afiliacion">
         <div class="container">
             <h2 class="section-title">¿Cómo afiliarse?</h2>
-            <div class="row justify-content-center">
-                <!-- Descripción -->
-                <div class="col-md-8 text-center mb-4">
-                    <p style="font-size: 1.1rem; line-height: 1.6; text-align: justify;">
-                        La afiliación a la COUD es un proceso evaluado por un comité, que revisa la vinculación con la
-                        comunidad universitaria
-                        y los requisitos establecidos. Este proceso puede incluir evaluaciones previas, dependiendo de
-                        cada programa.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Requisitos comunes -->
-            <h5 class="text-center mb-4" style="color: var(--vinotinto); font-size: 1.5rem;">Requisitos Comunes</h5>
-            <div class="row g-4">
-                <!-- Requisito 1 -->
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-lg h-100">
-                        <div class="card-body text-center">
-                            <i class="fas fa-university fa-3x mb-3" style="color: var(--vinotinto);"></i>
-                            <h6 class="card-title">Vinculación Universitaria</h6>
-                            <p class="card-text">Pertenecer a la comunidad universitaria o cumplir con los criterios
-                                específicos de cada instituto.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Requisito 2 -->
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-lg h-100">
-                        <div class="card-body text-center">
-                            <i class="fas fa-file-alt fa-3x mb-3" style="color: var(--vinotinto);"></i>
-                            <h6 class="card-title">Cumplir Requisitos</h6>
-                            <p class="card-text">Cumplir con los requisitos de admisión establecidos por cada área.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Requisito 3 -->
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-lg h-100">
-                        <div class="card-body text-center">
-                            <i class="fas fa-check-circle fa-3x mb-3" style="color: var(--vinotinto);"></i>
-                            <h6 class="card-title">Participación</h6>
-                            <p class="card-text">Participar en procesos de selección cuando sea necesario.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <p>
+                La afiliación a la COUD es un proceso evaluado por un comité, que revisa la vinculación con la comunidad
+                universitaria y los requisitos establecidos. Este proceso puede incluir evaluaciones previas,
+                dependiendo de
+                cada programa.
+            </p>
+            <h5 style="text-align:center; color: var(--vinotinto); font-size:1.3rem; margin-top:2rem;">
+                Requisitos para Afiliarse
+            </h5>
+            <ul class="requisitos-list mt-3">
+                <li>Ser parte de la comunidad universitaria (estudiantes, docentes, administrativos o egresados).</li>
+                <li>Completar el formulario de afiliación. <a href="https://comunidad.udistrital.edu.co/coud/files/2024/07/FORMULARIO-DE-ADMISI%C3%93N-COOPERATIVA-COUD-2024.pdf" style="color: var(--vinotinto);"  target="_blank">Descargar
+                        Formulario</a></li>
+                <li>Presentar copia del documento de identidad.</li>
+                <li>Realizar el pago de la cuota de afiliación.</li>
+                <li>Asistir a una sesión informativa.</li>
+                <li>Aceptar los principios cooperativos de la COUD.</li>
+                <li>Aprobación del Comité de Afiliación y la Asamblea General.</li>
+            </ul>
         </div>
     </section>
-
 
     <!-- SECCION INSTITUTOS -->
     <section id="institutos" class="institutos">
         <div class="container">
             <h2 class="section-title">Nuestros Institutos y Servicios</h2>
             <div class="instituto-item">
-                <strong>Academia Cooperativa de Lenguas (UD):</strong> Cursos de idiomas para mejorar habilidades
-                lingüísticas en el ámbito académico y profesional.
+                <strong>Academia Cooperativa de Lenguas (UD):</strong> Programas de idiomas, cursos intensivos, talleres
+                de conversación.
             </div>
             <div class="instituto-item">
-                <strong>Instituto de Aguas y el Ambiente (UD):</strong> Formación en sostenibilidad y gestión de
-                recursos hídricos.
+                <strong>Instituto de Aguas y el Ambiente (UD):</strong> Investigación sobre conservación de recursos
+                hídricos, gestión ambiental.
             </div>
             <div class="instituto-item">
-                <strong>Centro de Estudios en Servicios Públicos Domiciliarios (UD):</strong> Formación y consultoría en
-                servicios públicos (agua, energía, saneamiento).
+                <strong>Academia de Música (UD):</strong> Formación musical, talleres de composición, conciertos.
             </div>
             <div class="instituto-item">
-                <strong>Centro de Desarrollo Empresarial (UD):</strong> Apoyo al emprendimiento y la innovación
-                empresarial.
+                <strong>Centro de Desarrollo Empresarial (UD):</strong> Apoyo a emprendedores y empresas, asesorías en
+                planes de negocio.
             </div>
             <div class="instituto-item">
-                <strong>Academia de Investigación y Enseñanza en Música (UD):</strong> Educación en música para todos
-                los niveles, desde académica hasta recreativa.
+                <strong>Academia de Habilidades Tecnológicas (UD):</strong> Programación, robótica, tecnologías
+                emergentes y hackathons.
             </div>
             <div class="instituto-item">
-                <strong>Instituto en Artes (UD):</strong> Formación en artes visuales, teatro y danza.
+                <strong>Centro de Estudios en Servicios Públicos (UD):</strong> Mejoras en servicios domiciliarios,
+                eficiencia energética, políticas públicas.
             </div>
             <div class="instituto-item">
-                <strong>Academia de Habilidades Tecnológicas para el Futuro (UD):</strong> Formación en competencias
-                tecnológicas y digitales.
+                <strong>Instituto en Artes (UD):</strong> Clases de artes visuales, teatro y danza.
             </div>
         </div>
     </section>
@@ -653,13 +673,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div><!-- row -->
+        </div><!-- container -->
     </section>
 
-
     <!-- SECCION ACTIVIDADES DESTACADAS -->
-    <section id="actividades" class="actividades" style="background-color: var(--fondo-gris); padding: 60px 20px;">
+    <section id="actividades" class="actividades">
         <div class="container">
             <h2 class="section-title">Actividades Destacadas</h2>
             <p class="text-center mb-5" style="font-size: 1.2rem; color: var(--negro);">
@@ -669,15 +688,13 @@
             <div class="row g-4">
                 <!-- Card 1 -->
                 <div class="col-md-4">
-                    <div class="card border-0 shadow-lg h-100" style="overflow: hidden;">
-                        <img src="https://laud.udistrital.edu.co/sites/default/files/imagen-noticia/2022-09/laud-universidad-distrital-laud.jpg"
+                    <div class="card actividad-card">
+                        <img src="https://laud.udistrital.edu.co/sites/default/files/imagen-noticia/2022-08/laud-semana-por-la-verdad-udistrital-laud%20%283%29%20%281%29.jpeg"
                             class="card-img-top" alt="Feria de Emprendimiento"
                             style="object-fit: cover; height: 200px;">
-                        <div class="card-body">
-                            <h5 class="card-title" style="color: var(--vinotinto);">Feria de Emprendimiento</h5>
-                            <p class="card-text">
-                                Conoce los proyectos más innovadores de nuestros afiliados y apoya el talento local.
-                            </p>
+                        <div class="actividad-card-body">
+                            <h5>Feria de Emprendimiento</h5>
+                            <p>Conoce proyectos innovadores de nuestros afiliados y apoya el talento local.</p>
                             <button class="btn btn-sm"
                                 style="background-color: var(--amarillo); color: var(--vinotinto);"
                                 data-bs-toggle="modal" data-bs-target="#modalAct1">Ver más</button>
@@ -686,14 +703,12 @@
                 </div>
                 <!-- Card 2 -->
                 <div class="col-md-4">
-                    <div class="card border-0 shadow-lg h-100" style="overflow: hidden;">
+                    <div class="card actividad-card">
                         <img src="https://agencia.udistrital.edu.co/sites/agencia/files/imagen-noticias/2024-04/2.jpg"
                             class="card-img-top" alt="Jornadas de Bienestar" style="object-fit: cover; height: 200px;">
-                        <div class="card-body">
-                            <h5 class="card-title" style="color: var(--vinotinto);">Jornadas de Bienestar</h5>
-                            <p class="card-text">
-                                Participa en actividades recreativas, deportivas y de salud para fortalecer tu
-                                bienestar.
+                        <div class="actividad-card-body">
+                            <h5>Jornadas de Bienestar</h5>
+                            <p>Actividades recreativas y de salud para mejorar la calidad de vida de nuestros afiliados.
                             </p>
                             <button class="btn btn-sm"
                                 style="background-color: var(--amarillo); color: var(--vinotinto);"
@@ -703,27 +718,25 @@
                 </div>
                 <!-- Card 3 -->
                 <div class="col-md-4">
-                    <div class="card border-0 shadow-lg h-100" style="overflow: hidden;">
-                        <img src="https://laud.udistrital.edu.co/sites/default/files/imagen-noticia/2022-08/laud-semana-por-la-verdad-udistrital-laud%20%283%29%20%281%29.jpeg"
+                    <div class="card actividad-card">
+                        <img src="https://laud.udistrital.edu.co/sites/default/files/imagen-noticia/2022-09/laud-universidad-distrital-laud.jpg"
                             class="card-img-top" alt="Capacitaciones Cooperativas"
                             style="object-fit: cover; height: 200px;">
-                        <div class="card-body">
-                            <h5 class="card-title" style="color: var(--vinotinto);">Capacitaciones Cooperativas</h5>
-                            <p class="card-text">
-                                Aprende sobre educación financiera, liderazgo y valores cooperativos.
-                            </p>
+                        <div class="actividad-card-body">
+                            <h5>Capacitaciones Cooperativas</h5>
+                            <p>Aprende sobre educación financiera, liderazgo y valores cooperativos.</p>
                             <button class="btn btn-sm"
                                 style="background-color: var(--amarillo); color: var(--vinotinto);"
                                 data-bs-toggle="modal" data-bs-target="#modalAct3">Ver más</button>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+
+            </div><!-- row -->
+        </div><!-- container -->
     </section>
 
     <!-- MODALES PARA ACTIVIDADES -->
-    <!-- Modal Act 1 -->
     <div class="modal fade" id="modalAct1" tabindex="-1" aria-labelledby="modalAct1Label" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
@@ -745,7 +758,6 @@
         </div>
     </div>
 
-    <!-- Modal Act 2 -->
     <div class="modal fade" id="modalAct2" tabindex="-1" aria-labelledby="modalAct2Label" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
@@ -766,7 +778,6 @@
         </div>
     </div>
 
-    <!-- Modal Act 3 -->
     <div class="modal fade" id="modalAct3" tabindex="-1" aria-labelledby="modalAct3Label" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
@@ -787,6 +798,52 @@
         </div>
     </div>
 
+    <!-- SECCION INFO EXTRA / SERVICIOS -->
+    <section id="infoextra" class="extra-info">
+        <div class="container">
+            <h2 class="section-title">Servicios y Actividades de la COUD</h2>
+            <p class="text-center" style="font-size: 1.1rem;">
+                Además de nuestras líneas de formación y apoyo cooperativo, contamos con una variedad de servicios
+                orientados a mejorar la calidad de vida de nuestros asociados.
+            </p>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <h5 style="color: var(--vinotinto);">Servicios Financieros y Convenios</h5>
+                    <ul class="list-check">
+                        <li>Compra y venta de cartera.</li>
+                        <li>Gestión de donaciones y subsidios.</li>
+                        <li>Convenios de transporte con descuentos.</li>
+                        <li>Créditos financieros para múltiples necesidades.</li>
+                        <li>Acceso a planes de vivienda mediante convenios.</li>
+                        <li>Descuentos por nómina y facilidades de pago.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5 style="color: var(--vinotinto);">Formación y Capacitación</h5>
+                    <ul class="list-check">
+                        <li>Formación y capacitación en institutos adscritos.</li>
+                        <li>Promoción de actividades culturales y deportivas.</li>
+                        <li>Asistencia en eventos académicos y encuentros universitarios.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="my-5">
+
+            <h2 class="section-title">Solicitar un Crédito</h2>
+            <p class="text-center" style="font-size: 1.1rem;">Si ya eres afiliado y requieres un apoyo económico,
+                te ofrecemos créditos en condiciones favorables.</p>
+            <ul class="requisitos-list mt-3">
+                <li>Ser miembro activo con al menos 6 meses de antigüedad.</li>
+                <li>Completar el formulario de crédito. <a href="https://comunidad.udistrital.edu.co/coud/files/2024/07/FORMULARIO-DE-SOLICITUD-DE-CREDITO-COUD.pdf" style="color: var(--vinotinto);" target="_blank">Descargar
+                        Formulario</a></li>
+                <li>Presentar identificación, comprobantes de ingreso y estados financieros.</li>
+                <li>Tener historial crediticio favorable.</li>
+                <li>Proveer una garantía en caso de montos altos.</li>
+                <li>Obtener la aprobación del comité de crédito.</li>
+            </ul>
+        </div>
+    </section>
 
     <!-- SECCION TESTIMONIOS -->
     <section id="testimonials" class="testimonials">
@@ -824,20 +881,20 @@
             <div class="row justify-content-center">
                 <div class="col-md-3">
                     <div class="stat-box">
-                        <h3>+500</h3>
+                        <h3>+30</h3>
                         <p>Afiliados Felices</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="stat-box">
-                        <h3>10</h3>
+                        <h3>3</h3>
                         <p>Años de Experiencia</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="stat-box">
-                        <h3>15%</h3>
-                        <p>Incremento en Beneficios</p>
+                        <h3>5%</h3>
+                        <p>Incremento en Beneficios Anuales</p>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -849,70 +906,78 @@
             </div>
         </div>
     </section>
+
     <!-- SECCION CONTACTO -->
-    <section id="contact" class="contact" style="background-color: var(--fondo-gris); padding: 60px 20px;">
+    <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Contáctanos</h2>
-            <p class="text-center mb-5" style="font-size: 1.2rem; color: var(--negro);">
+            <p class="text-center mb-5" style="font-size: 1.2rem; color: var(--blanco);">
                 ¿Tienes dudas? Escríbenos, llámanos o visítanos. Estamos aquí para ayudarte.
             </p>
-            <div class="row align-items-center">
-                <!-- Información de contacto -->
-                <div class="col-lg-5 mb-4 mb-lg-0">
-                    <div class="card border-0 shadow-lg bg-light">
+            <div class="row align-items-start justify-content-center">
+
+                <!-- Información de contacto principal (nueva) -->
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3" style="color: var(--amarillo); font-size: 1.3rem;">Información de Contacto</h5>
+                    <ul class="list-unstyled" style="line-height: 1.7; text-align:left;">
+                        <li><i class="fas fa-phone"></i> Tel: 3239300 Ext. 6537</li>
+                        <li><i class="fas fa-envelope"></i> Email: <a href="mailto:cooperativacoud@udistrital.edu.co"
+                                style="text-decoration:none; color: var(--amarillo);">cooperativacoud@udistrital.edu.co</a>
+                        </li>
+                        <li><i class="fas fa-map-marker-alt"></i> Dirección: Carrera 32 #12-70, Bogotá – Oficina COUD
+                            Sótano 2</li>
+                        <li><i class="fas fa-id-card"></i> NIT: 901690370-8</li>
+                    </ul>
+                </div>
+
+                <!-- Tarjeta con la info anterior para ejemplificar -->
+                <div class="col-lg-4 mb-4">
+                    <div class="card border-0 shadow-lg">
                         <div class="card-body">
-                            <h5 class="card-title text-center" style="color: var(--vinotinto); font-size: 1.5rem;">
-                                Visítanos</h5>
-                            <p class="text-center mb-4" style="font-size: 1.1rem;">Estamos ubicados en:</p>
-                            <ul class="list-unstyled text-center" style="line-height: 1.8;">
-                                <li><i class="fas fa-map-marker-alt"></i> Aduanilla de Paiba, Calle 13 # 31-75</li>
-                                <li>Oficina ubicada frente al área de sistemas.</li>
-                                <li><i class="fas fa-phone"></i> Teléfono: +123-456-7890</li>
-                                <li><i class="fas fa-envelope"></i> Correo: <a href="mailto:Secretariacoud@gmail.com"
-                                        style="text-decoration: none; color: var(--vinotinto);">Secretariacoud@gmail.com</a>
-                                </li>
-                                <li><i class="fas fa-globe"></i> Página web: <a href="http://Coud.www" target="_blank"
-                                        style="text-decoration: none; color: var(--vinotinto);">Coud.www</a></li>
-                            </ul>
+                            <h5 class="mb-3" style="color: var(--vinotinto); font-size:1.2rem;">Oficina Principal</h5>
+                            <p class="mb-2" style="font-size:1rem;">
+                                Ubicada en la Sede Aduanilla de Paiba, Calle 13 # 31-75, <br>
+                                Oficina COUD.
+                            </p>
+                            <p style="font-size:1rem;">Compra de cartera, gestión de subsidios y mayor información
+                                presencial.</p>
                         </div>
                     </div>
                 </div>
-                <!-- Formulario -->
-                <div class="col-lg-7">
+
+                <!-- Formulario de contacto -->
+                <div class="col-lg-4">
                     <div class="card border-0 shadow-lg">
                         <div class="card-body">
-                            <h5 class="text-center mb-4" style="color: var(--vinotinto); font-size: 1.5rem;">Envíanos un
-                                mensaje</h5>
+                            <h5 class="mb-4" style="color: var(--vinotinto); font-size: 1.3rem; text-align:center;">
+                                Envíanos un Mensaje</h5>
                             <form>
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <input type="text" class="form-control" placeholder="Nombre Completo" required>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <input type="email" class="form-control" placeholder="Correo Electrónico"
-                                            required>
-                                    </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Nombre Completo" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Correo Electrónico" required>
                                 </div>
                                 <div class="mb-3">
                                     <input type="text" class="form-control" placeholder="Asunto" required>
                                 </div>
                                 <div class="mb-3">
-                                    <textarea class="form-control" rows="5" placeholder="Escribe tu mensaje aquí..."
+                                    <textarea class="form-control" rows="4" placeholder="Escribe tu mensaje aquí..."
                                         required></textarea>
                                 </div>
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-lg"
-                                        style="background-color: var(--amarillo); color: var(--vinotinto); font-size: 1.1rem; padding: 10px 30px;">Enviar
-                                        Mensaje</button>
+                                        style="background-color: var(--amarillo); color: var(--vinotinto); font-size: 1.1rem; padding: 10px 30px;">
+                                        Enviar Mensaje
+                                    </button>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
     </section>
-
 
     <!-- FOOTER -->
     <footer class="footer">
